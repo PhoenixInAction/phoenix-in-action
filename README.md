@@ -14,6 +14,8 @@ work for you.
 
 ## Buy the book!
 
+<img src="support/phoenix-in-action-cover.png" alt="Phoenix in Action cover" height="200px" />
+
 If you don't already have the book, you can [buy it from Manning][pia].
 
 [pia]: https://www.manning.com/books/phoenix-in-action?a_aid=geolessel&a_bid=80a2cec0
