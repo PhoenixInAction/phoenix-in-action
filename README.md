@@ -1,5 +1,7 @@
 # Phoenix in Action
 
+<img src="support/phoenix-in-action-cover.png" alt="Phoenix in Action cover" height="200px" />
+
 Thanks for checking out the code listings and snippets from Phoenix in
 Action!
 
@@ -13,8 +15,6 @@ Please let me know if you spot any errors or if any listing does not
 work for you.
 
 ## Buy the book!
-
-<img src="support/phoenix-in-action-cover.png" alt="Phoenix in Action cover" height="200px" />
 
 If you don't already have the book, you can [buy it from Manning][pia].
 
