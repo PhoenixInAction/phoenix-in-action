@@ -1,0 +1,39 @@
+<h1><%= @post.title %></h1>
+
+<div>
+  <p><%= date(@post.inserted_at) %></p>
+  <%= text_to_html(@post.body) %>
+</div>
+
+<hr />
+
+<h4>Comments</h4>
+<div>
+  <%= for comment <- @post.comments do %>
+      <div><em><%= comment.name %> says:</em> <%= text_to_html(comment.body) %></div>
+  <% end %>
+</div>
+
+<hr />
+
+<h5>Post a comment</h5>
+<%= form_for @new_comment, post_comment_path(@conn, :create, @post), fn f -> %>
+  <div>
+    <label>
+      Name:<br />
+      <%= text_input f, :name %>
+    </label>
+  </div>
+  <div>
+    <label>Comment:<br />
+      <%= textarea f, :body %>
+    </label>
+  </div>
+  <%= submit "Submit Comment" %>
+<% end %>
+
+<hr />
+
+<div>
+  <span><%= link "Back", to: post_path(@conn, :index) %></span>
+</div>
