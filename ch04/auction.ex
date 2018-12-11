@@ -41,7 +41,7 @@ defmodule Auction.FakeRepo do
       title: "U2 - Achtung Baby on CD",
       description: "The sound of 4 men chopping down The Joshua Tree",
       ends_at: ~N[2018-11-05 03:12:29]
-    }
+    },
   ]
 
   def all(Item), do: @items
