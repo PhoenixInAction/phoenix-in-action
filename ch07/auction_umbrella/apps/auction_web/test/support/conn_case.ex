@@ -5,7 +5,7 @@ defmodule AuctionWeb.ConnCase do
 
   Such tests rely on `Phoenix.ConnTest` and also
   import other functionality to make it easier
-  to build common datastructures and query the data layer.
+  to build common data structures and query the data layer.
 
   Finally, if the test case interacts with the database,
   it cannot be async. For this reason, every test runs
@@ -19,20 +19,14 @@ defmodule AuctionWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      import AuctionWeb.Router.Helpers
+      alias AuctionWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
       @endpoint AuctionWeb.Endpoint
     end
   end
 
-
-  setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(AuctionWeb.Repo)
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(AuctionWeb.Repo, {:shared, self()})
-    end
+  setup _tags do
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
-
 end

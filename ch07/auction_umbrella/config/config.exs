@@ -9,6 +9,8 @@ use Mix.Config
 # back to each application for organization purposes.
 import_config "../apps/*/config/config.exs"
 
+config :phoenix, :json_library, Jason
+
 # Sample configuration (overrides the imported configuration above):
 #
 #     config :logger, :console,
