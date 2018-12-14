@@ -1,0 +1,4 @@
+<p>
+  <%= integer_to_currency(@bid.amount) %>
+  <em>from <%= Map.get(@bid.user, :username) || @username %></em>
+</p>
