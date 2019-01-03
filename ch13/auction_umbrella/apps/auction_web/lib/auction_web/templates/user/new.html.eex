@@ -1,0 +1,29 @@
+<h1>User Registration</h1>
+
+<%= form_for @user, Routes.user_path(@conn, :create), fn f -> %>
+  <%= if @user.action do %>
+    <div class="alert alert-danger">
+      Unfortunately, there are errors in your submission. Please correct them below.
+    </div>
+  <% end %>
+
+  <%= label f, :username %>
+  <%= error_tag f, :username %>
+  <%= text_input f, :username %>
+
+  <%= label f, :email_address %>
+  <%= error_tag f, :email_address %>
+  <%= text_input f, :email_address %>
+
+  <%= label f, :password %>
+  <%= error_tag f, :password %>
+  <%= password_input f, :password %>
+
+  <%= label f, :password_confirmation %>
+  <%= error_tag f, :password_confirmation %>
+  <%= password_input f, :password_confirmation %>
+
+  <div>
+    <%= submit "Submit" %>
+  </div>
+<% end %>

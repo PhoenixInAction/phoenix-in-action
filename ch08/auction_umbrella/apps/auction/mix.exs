@@ -9,7 +9,7 @@ defmodule Auction.MixProject do
       config_path: "../../config/config.exs",
       deps_path: "../../deps",
       lockfile: "../../mix.lock",
-      elixir: "~> 1.6",
+      elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -26,8 +26,8 @@ defmodule Auction.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ecto, "~> 2.2.7"},
-      {:postgrex, "~> 0.13.3"}
+      {:ecto_sql, "3.0.3"},
+      {:postgrex, "0.14.1"}
     ]
   end
 end

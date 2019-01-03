@@ -1,7 +1,6 @@
 defmodule Auction.Item do
-  use Ecto.Schema
-
   import Ecto.Changeset
+  use Ecto.Schema
 
   schema "items" do
     field :title, :string
@@ -20,7 +19,7 @@ defmodule Auction.Item do
   end
 
   defp validate(:ends_at, ends_at_date) do
-    case NaiveDateTime.compare(ends_at_date, NaiveDateTime.utc_now()) do
+    case DateTime.compare(ends_at_date, DateTime.utc_now()) do
       :lt -> [ends_at: "ends_at cannot be in the past"]
       _ -> []
     end

@@ -1,0 +1,3 @@
+<h1>New Item</h1>
+
+<%= render "form.html", item: @item, action: Routes.item_path(@conn, :create) %>
